@@ -75,3 +75,69 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(card);
     });
 });
+// EV Policy Simulator
+function runSimulation() {
+    const evSubsidy = parseInt(document.getElementById('evSubsidy').value);
+    const solarSubsidy = parseInt(document.getElementById('solarSubsidy').value);
+    const gridCarbon = parseInt(document.getElementById('gridCarbon').value);
+    
+    // Simple model based on your paper's insights
+    const baseEmissions = 100;
+    const evAdoption = Math.min(100, (evSubsidy / 100) * 80 + (solarSubsidy / 100) * 20);
+    const solarCapacity = (solarSubsidy / 100) * 50;
+    
+    // Emissions calculation considering the trade-off
+    const emissionsReductionFromEVs = (evAdoption / 100) * 30;
+    const emissionsIncreaseFromGrid = (evAdoption / 100) * (gridCarbon / 100) * 25;
+    const emissionsReductionFromSolar = (solarCapacity / 50) * 15;
+    
+    const totalEmissions = Math.max(0, baseEmissions - emissionsReductionFromEVs + emissionsIncreaseFromGrid - emissionsReductionFromSolar);
+    const welfareGain = (evAdoption * 0.3) + (solarCapacity * 0.4) - (totalEmissions * 0.2);
+    
+    // Update UI
+    document.getElementById('totalEmissions').textContent = Math.round(totalEmissions);
+    document.getElementById('evAdoption').textContent = Math.round(evAdoption) + '%';
+    document.getElementById('solarCapacity').textContent = Math.round(solarCapacity) + ' MW';
+    document.getElementById('welfareGain').textContent = Math.round(welfareGain);
+    
+    // Generate insights
+    let insights = '';
+    if (evSubsidy > solarSubsidy + 20) {
+        insights = '⚠️ High EV subsidies without sufficient solar investment may increase grid emissions. Consider balancing subsidies.';
+    } else if (solarSubsidy > evSubsidy + 20) {
+        insights = '✅ Good solar investment, but EV adoption might be limited without sufficient vehicle subsidies.';
+    } else {
+        insights = '🎉 Balanced approach! Coordinated subsidies maximize welfare gains while minimizing emissions.';
+    }
+    
+    if (gridCarbon > 70) {
+        insights += ' High grid carbon intensity reduces the environmental benefits of EV adoption.';
+    }
+    
+    document.getElementById('policyInsights').textContent = insights;
+    
+    updateTradeoffChart(evSubsidy, solarSubsidy, totalEmissions, welfareGain);
+}
+
+function updateTradeoffChart(evSubsidy, solarSubsidy, emissions, welfare) {
+    // Simple chart update - in practice, you'd use Chart.js here
+    console.log(`Updating chart with EV: ${evSubsidy}, Solar: ${solarSubsidy}, Emissions: ${emissions}, Welfare: ${welfare}`);
+}
+
+// Initialize slider values
+document.getElementById('evSubsidy').addEventListener('input', function() {
+    document.getElementById('evSubsidyValue').textContent = this.value;
+});
+
+document.getElementById('solarSubsidy').addEventListener('input', function() {
+    document.getElementById('solarSubsidyValue').textContent = this.value;
+});
+
+document.getElementById('gridCarbon').addEventListener('input', function() {
+    document.getElementById('gridCarbonValue').textContent = this.value + '%';
+});
+
+// Run initial simulation
+document.addEventListener('DOMContentLoaded', function() {
+    runSimulation();
+});
