@@ -1,7 +1,247 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varun Chati | Social Data Scientist</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- MathJax for mathematical notation -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
 <body>
-<h1>VC's World</h1>
-<p>Currently under construction.</p>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Varun Chati</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#projects" class="nav-link">Research</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>Social Data <span class="highlight">Scientist</span></h1>
+                <p class="hero-subtitle">Answering complex questions about politics and human behavior through rigorous quantitative methods</p>
+                <div class="hero-math">
+                    $$Y_i = \beta_0 + \beta_1T_i + \epsilon_i$$
+                </div>
+                <a href="#projects" class="btn">Explore My Research</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects/Research Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Research Portfolio</h2>
+            <p class="section-subtitle">Methodologically rigorous studies with policy implications</p>
+            
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Refugee Labor Market Integration</h3>
+                        <span class="project-org">World Bank</span>
+                    </div>
+                    <div class="project-content">
+                        <p>Analysis of administrative panel data (50,000+ observations) on refugee labor market outcomes in Germany using randomization inference to evaluate integration policies.</p>
+                        
+                        <div class="interactive-section">
+                            <button class="code-toggle" onclick="toggleCode('code1')">
+                                <i class="fas fa-code"></i> View Analysis Approach
+                            </button>
+                            <div id="code1" class="code-snippet">
+                                <pre>// Randomization Inference Framework
+foreach i=1/1000 {
+    permute treatment assignment
+    estimate treatment effect τ_i
+}
+p-value = proportion(|τ_i| ≥ |τ_observed|)</pre>
+                            </div>
+                        </div>
+
+                        <div class="project-tools">
+                            <span class="tool-tag">Stata</span>
+                            <span class="tool-tag">Randomization Inference</span>
+                            <span class="tool-tag">Panel Data</span>
+                        </div>
+                        <p class="project-result"><strong>Impact:</strong> Informed key policy report on refugee integration in Germany</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn-link"><i class="fas fa-chart-bar"></i> Results Dashboard</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>COVID-19 Misinformation RCT</h3>
+                        <span class="project-org">Good Business Lab</span>
+                    </div>
+                    <div class="project-content">
+                        <p>Managed one of India's first randomized controlled trials on COVID-19 misinformation, studying how information interventions affect belief updating and preventive behaviors.</p>
+                        
+                        <div class="interactive-section">
+                            <div class="rct-visual">
+                                <div class="rct-flow">
+                                    <div class="rct-step">Sample</div>
+                                    <div class="rct-arrow">→</div>
+                                    <div class="rct-step">Randomize</div>
+                                    <div class="rct-arrow">→</div>
+                                    <div class="rct-step treatment">Treatment</div>
+                                    <div class="rct-arrow">→</div>
+                                    <div class="rct-step">Outcome</div>
+                                </div>
+                                <div class="rct-flow">
+                                    <div class="rct-step">Sample</div>
+                                    <div class="rct-arrow">→</div>
+                                    <div class="rct-step">Randomize</div>
+                                    <div class="rct-arrow">→</div>
+                                    <div class="rct-step control">Control</div>
+                                    <div class="rct-arrow">→</div>
+                                    <div class="rct-step">Outcome</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-tools">
+                            <span class="tool-tag">R</span>
+                            <span class="tool-tag">RCT</span>
+                            <span class="tool-tag">Survey Design</span>
+                        </div>
+                        <p class="project-result"><strong>Scope:</strong> Managed end-to-end execution with team of 5 research staff</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn-link"><i class="fas fa-file-pdf"></i> Conference Paper</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Female Labor Force Participation</h3>
+                        <span class="project-org">World Bank</span>
+                    </div>
+                    <div class="project-content">
+                        <p>Collated and analyzed time-use data from 139 countries to assess constraints on female labor force participation, contributing to cross-country gender gap analysis.</p>
+                        
+                        <div class="interactive-section">
+                            <div class="stats-grid">
+                                <div class="stat-item">
+                                    <div class="stat-number">139</div>
+                                    <div class="stat-label">Countries</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">50M+</div>
+                                    <div class="stat-label">Data Points</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">△</div>
+                                    <div class="stat-label">Causal Effects</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-tools">
+                            <span class="tool-tag">Python</span>
+                            <span class="tool-tag">Multiple Hypothesis Testing</span>
+                            <span class="tool-tag">Cross-country Analysis</span>
+                        </div>
+                        <p class="project-result"><strong>Contribution:</strong> Applied multiple testing corrections for robust inference</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn-link"><i class="fas fa-globe-americas"></i> Cross-country Analysis</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container about-container">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>I bridge the gap between rigorous econometric methods and pressing social science questions. With experience at The World Bank and leading research labs, I specialize in causal inference and randomized controlled trials to understand human behavior and inform policy.</p>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Methodologies</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Causal Inference</span>
+                            <span class="skill-tag">Randomized Controlled Trials</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Multiple Hypothesis Testing</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Technical</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Stata</span>
+                            <span class="skill-tag">R</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">GIS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="personal-interests">
+                    <h4>Beyond Research</h4>
+                    <p>Woodworking, Ramen making, Fixing cars, Watercolour painting</p>
+                </div>
+
+                <div class="about-links">
+                    <a href="Varun_Chati_Resume.pdf" class="btn" download>
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                    <a href="https://github.com/yourusername" class="btn btn-ghost">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="section-subtitle">Always open to discussing new research opportunities and collaborations</p>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <a href="mailto:varuachati@gmail.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>varuachati@gmail.com</span>
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <a href="https://linkedin.com/in/yourprofile" class="contact-link">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Washington, DC</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Varun Chati. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
