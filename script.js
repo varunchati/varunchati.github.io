@@ -13,6 +13,11 @@ function toggleCode(codeId) {
     }
 }
 
+// Show EV project details
+function showEVDetails() {
+    alert('Interactive EV results visualization would be implemented here with charts showing:\n\n• SO₂ reduction trends\n• EV sales by state\n• Electricity generation correlations\n\nThis demonstrates the technical capability to build interactive data dashboards.');
+}
+
 // Navbar scroll effect
 window.addEventListener('scroll', function() {
     const navbar = document.getElementById('navbar');
@@ -58,10 +63,12 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe project cards for animation
+// Observe elements for animation
 document.addEventListener('DOMContentLoaded', function() {
     const projectCards = document.querySelectorAll('.project-card');
-    projectCards.forEach(card => {
+    const hobbyCards = document.querySelectorAll('.hobby-card');
+    
+    [...projectCards, ...hobbyCards].forEach(card => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(30px)';
         card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
