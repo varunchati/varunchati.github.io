@@ -76,10 +76,11 @@ Edit the CSS variables in `style.css`:
     --math-color: #8e44ad;       /* Purple for mathematical elements */
     --art-color: #e67e22;        /* Orange for artistic accents */
 }
+```
 Adding New Projects
 Use this template in index.html:
 
-html
+```html
 <div class="project-card">
     <div class="project-header">
         <h3>Project Title</h3>
@@ -97,16 +98,18 @@ html
         <a href="#" class="btn-link"><i class="fab fa-github"></i> Code</a>
     </div>
 </div>
+```
 Adding Interactive Elements
 Use the toggle code pattern:
 
-html
+```html
 <button class="code-toggle" onclick="toggleCode('unique-id')">
     <i class="fas fa-code"></i> View Code
 </button>
 <div id="unique-id" class="code-snippet">
     <!-- Your code content here -->
 </div>
+```
 📊 Interactive Dashboards
 The repository includes an example EV policy dashboard (ev-dashboard.html) that demonstrates:
 
@@ -148,10 +151,11 @@ Mobile (< 768px)
 
 Key breakpoints in CSS:
 
-css
+```css
 @media (max-width: 768px) {
     /* Mobile-specific styles */
 }
+```
 🔧 Browser Support
 Brave (recommended)
 
