@@ -52,7 +52,7 @@
                 <div class="project-card featured">
                     <div class="project-badge">Featured Research</div>
                     <div class="project-header">
-                        <h3>Fast Subsidies, Furious Emissions: The Double-Edged Impact of EV Policies</h3>
+                        <h3>The Double-Edged Impact of EV Policies</h3>
                         <span class="project-org">University of Maryland</span>
                     </div>
                     <div class="project-content">
@@ -60,7 +60,7 @@
                         
                         <div class="interactive-section">
                             <button class="code-toggle" onclick="toggleCode('ev-model')">
-                                <i class="fas fa-calculator"></i> View Welfare Optimization Model
+                                <i class="fas fa-calculator"></i> Welfare Optimization Model
                             </button>
                             <div id="ev-model" class="code-snippet">
                                 <pre>// Social Welfare Optimization
@@ -186,7 +186,75 @@ p-value = proportion(|τ_i| ≥ |τ_observed|)</pre>
             </div>
         </div>
     </section>
-
+<!-- Add this section after your projects section -->
+<section id="ev-interactive" class="interactive-model">
+    <div class="container">
+        <h2>EV Policy Simulator</h2>
+        <p class="section-subtitle">Explore the trade-offs between EV subsidies and renewable energy investments</p>
+        
+        <div class="simulator-container">
+            <div class="controls-panel">
+                <h4>Policy Levers</h4>
+                
+                <div class="slider-control">
+                    <label>EV Subsidy Budget ($M):</label>
+                    <input type="range" id="evSubsidy" min="0" max="100" value="50" class="slider">
+                    <span id="evSubsidyValue">50</span>
+                </div>
+                
+                <div class="slider-control">
+                    <label>Solar Microgrid Subsidy ($M):</label>
+                    <input type="range" id="solarSubsidy" min="0" max="100" value="30" class="slider">
+                    <span id="solarSubsidyValue">30</span>
+                </div>
+                
+                <div class="slider-control">
+                    <label>Electricity Grid Carbon Intensity:</label>
+                    <input type="range" id="gridCarbon" min="10" max="90" value="70" class="slider">
+                    <span id="gridCarbonValue">70%</span>
+                </div>
+                
+                <button onclick="runSimulation()" class="btn">Run Simulation</button>
+            </div>
+            
+            <div class="results-panel">
+                <div class="metric-grid">
+                    <div class="metric-card">
+                        <div class="metric-value" id="totalEmissions">--</div>
+                        <div class="metric-label">Total Emissions</div>
+                        <div class="metric-change" id="emissionsChange"></div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="evAdoption">--</div>
+                        <div class="metric-label">EV Adoption</div>
+                        <div class="metric-change" id="adoptionChange"></div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="solarCapacity">--</div>
+                        <div class="metric-label">Solar Capacity</div>
+                        <div class="metric-change" id="solarChange"></div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="welfareGain">--</div>
+                        <div class="metric-label">Welfare Gain</div>
+                        <div class="metric-change" id="welfareChange"></div>
+                    </div>
+                </div>
+                
+                <div class="tradeoff-chart">
+                    <canvas id="tradeoffChart"></canvas>
+                </div>
+            </div>
+        </div>
+        
+        <div class="insights-panel">
+            <h4>Policy Insights</h4>
+            <div id="policyInsights">
+                Adjust the sliders to see how different policy mixes affect outcomes...
+            </div>
+        </div>
+    </div>
+</section>
     <!-- Hobbies Section -->
     <section id="hobbies" class="hobbies">
         <div class="container">
