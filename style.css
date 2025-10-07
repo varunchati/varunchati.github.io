@@ -23,18 +23,6 @@ body {
     background: #fff;
 }
 
-/* Modern font for your name */
-.nav-logo {
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
-    font-size: 1.5rem;
-}
-
-h1, h2, h3, h4 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-}
-
 .container {
     width: 90%;
     max-width: 1200px;
@@ -77,7 +65,9 @@ body::before {
 }
 
 .nav-logo {
+    font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
+    font-weight: 600;
     text-decoration: none;
     color: var(--primary-color);
 }
@@ -170,6 +160,38 @@ body::before {
     line-height: 1.8;
 }
 
+.btn {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+    background: #c0392b;
+}
+
+.btn-ghost {
+    background: transparent;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.btn-ghost:hover {
+    background: var(--secondary-color);
+    color: white;
+}
+
 /* Projects Section */
 .projects {
     background: var(--light-bg);
@@ -225,6 +247,27 @@ body::before {
     transform: translateY(-10px) scale(1.02);
 }
 
+.project-header {
+    padding: 1.5rem 1.5rem 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.project-header h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.project-org {
+    color: var(--accent-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
 /* Key Findings Styling */
 .key-findings {
     margin: 1.5rem 0;
@@ -258,6 +301,120 @@ body::before {
     color: #666;
     font-size: 0.9rem;
     text-align: right;
+}
+
+.project-tools {
+    margin: 1.5rem 0;
+}
+
+.tool-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent-color), var(--math-color));
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.project-result {
+    font-style: italic;
+    color: #555;
+    border-left: 3px solid var(--art-color);
+    padding-left: 1rem;
+    margin: 1rem 0;
+}
+
+/* Interactive Elements */
+.interactive-section {
+    margin: 1.5rem 0;
+}
+
+.code-toggle {
+    background: var(--math-color);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.code-toggle:hover {
+    background: #7d3c98;
+}
+
+.code-snippet {
+    background: #2d3748;
+    color: #e2e8f0;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    font-family: 'Monaco', 'Consolas', monospace;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.rct-visual {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.rct-flow {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.rct-step {
+    padding: 0.5rem 1rem;
+    background: var(--light-bg);
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.rct-step.treatment {
+    background: var(--accent-color);
+    color: white;
+}
+
+.rct-step.control {
+    background: var(--math-color);
+    color: white;
+}
+
+.rct-arrow {
+    padding: 0 0.5rem;
+    color: #666;
+}
+
+.project-links {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.btn-link {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.btn-link:hover {
+    color: var(--math-color);
 }
 
 /* Hobbies Section */
@@ -314,28 +471,88 @@ body::before {
     border: 1px solid #e0e0e0;
 }
 
-/* Rest of your existing CSS remains the same... */
-/* [Include all the previous CSS styles for projects, about, contact sections] */
-
-.btn {
-    display: inline-block;
-    background: var(--secondary-color);
-    color: white;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+/* About Section */
+.about {
+    background: white;
 }
 
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
-    background: #c0392b;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.skill-category h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    background: var(--light-bg);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    border: 1px solid #e0e0e0;
+}
+
+.about-links {
+    margin-top: 2rem;
+}
+
+.about-links .btn {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Contact Section */
+.contact {
+    background: linear-gradient(135deg, var(--primary-color), #1a1a2e);
+    color: white;
+    text-align: center;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.contact-item {
+    padding: 2rem;
+}
+
+.contact-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--art-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #1a1a2e;
+    color: #ccc;
+    font-size: 0.9rem;
 }
 
 /* Responsive Design */
@@ -363,88 +580,14 @@ body::before {
     .hobbies-grid {
         grid-template-columns: 1fr;
     }
-}
-/* Interactive Model Styles */
-.interactive-model {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-}
-
-.simulator-container {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 2rem;
-    margin: 2rem 0;
-}
-
-.controls-panel {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-}
-
-.slider-control {
-    margin-bottom: 1.5rem;
-}
-
-.slider-control label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-
-.slider {
-    width: 100%;
-    margin: 0.5rem 0;
-}
-
-.results-panel {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 2rem;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-}
-
-.metric-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.metric-card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 1.5rem;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.metric-value {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-.metric-label {
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-.metric-change {
-    font-size: 0.8rem;
-    margin-top: 0.5rem;
-}
-
-.tradeoff-chart {
-    height: 200px;
-    margin-top: 1rem;
-}
-
-.insights-panel {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    margin-top: 2rem;
+    
+    .project-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .about-links .btn {
+        margin-right: 0;
+        width: 100%;
+    }
 }
