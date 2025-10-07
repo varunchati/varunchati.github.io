@@ -2,8 +2,6 @@
 
 A clean, modern, and interactive portfolio website for showcasing quantitative research and data science projects. Built with pure HTML, CSS, and JavaScript.
 
-![Website Preview](https://via.placeholder.com/800x400/667eea/ffffff?text=Varun+Chati+Portfolio)
-
 ## 🚀 Features
 
 - **Responsive Design**: Works perfectly on desktop, tablet, and mobile
@@ -24,19 +22,16 @@ A clean, modern, and interactive portfolio website for showcasing quantitative r
 
 ## 📁 Project Structure
 yourusername.github.io/
-│
-├── index.html # Main website file
-├── ev-dashboard.html # Interactive EV policy dashboard
-├── style.css # All styling and responsive design
-├── script.js # Interactive functionality
-├── README.md # This file
-│
-├── Resume.pdf # Your resume (replace with yours)
-├── ScholarlyPaper.pdf # Research paper (replace with yours)
-│
-└── assets/ # Optional: images and other assets
-├── images/
-└── documents/
+- index.html # Main website file
+- ev-dashboard.html # Interactive EV policy dashboard
+- style.css # All styling and responsive design
+- script.js # Interactive functionality
+- README.md # This file
+- Resume.pdf # Your resume (replace with yours)
+- ScholarlyPaper.pdf # Research paper (replace with yours)
+- assets/ # Optional: images and other assets
+   - images/
+   - documents/
 
 
 ## 🚀 Quick Start
