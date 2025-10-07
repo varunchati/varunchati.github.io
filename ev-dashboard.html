@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Policy Dashboard - Varun Chati</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .dashboard-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .chart-container {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin: 2rem 0;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Varun Chati</a>
+        </div>
+    </nav>
+
+    <section class="dashboard-hero">
+        <div class="container">
+            <h1>EV Policy Impact Dashboard</h1>
+            <p>Interactive visualization of findings from "Fast Subsidies, Furious Emissions"</p>
+            <a href="index.html#projects" class="back-link">← Back to Portfolio</a>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <div class="chart-grid">
+                <div class="chart-container">
+                    <h3>EV Sales vs Electricity Generation</h3>
+                    <canvas id="evElectricityChart"></canvas>
+                </div>
+                
+                <div class="chart-container">
+                    <h3>Pollution Trends Post-FAME Policy</h3>
+                    <canvas id="pollutionChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Research Insights</h3>
+                    <div class="key-findings">
+                        <div class="finding-item">
+                            <span class="finding-metric">Policy Trade-off</span>
+                            <span class="finding-desc">EV subsidies alone increase grid emissions without renewable energy support</span>
+                        </div
