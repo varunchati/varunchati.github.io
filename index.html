@@ -6,6 +6,8 @@
     <title>Varun Chati | Social Data Scientist</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
     <!-- MathJax for mathematical notation -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -18,6 +20,7 @@
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#projects" class="nav-link">Research</a></li>
+                <li><a href="#hobbies" class="nav-link">Hobbies</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -31,7 +34,7 @@
                 <h1>Social Data <span class="highlight">Scientist</span></h1>
                 <p class="hero-subtitle">Answering complex questions about politics and human behavior through rigorous quantitative methods</p>
                 <div class="hero-math">
-                    $$Y_i = \beta_0 + \beta_1T_i + \epsilon_i$$
+                    $$\min_{p,s} V(p) + G(r(s,c)) + O \quad \text{s.t.} \quad \int_{0}^{\bar{w}}y(e(p),r(s,c),w)dw\leq\bar{y}; \quad B\geq s+p$$
                 </div>
                 <a href="#projects" class="btn">Explore My Research</a>
             </div>
@@ -45,7 +48,64 @@
             <p class="section-subtitle">Methodologically rigorous studies with policy implications</p>
             
             <div class="project-grid">
-                <!-- Project 1 -->
+                <!-- EV Project -->
+                <div class="project-card featured">
+                    <div class="project-badge">Featured Research</div>
+                    <div class="project-header">
+                        <h3>Fast Subsidies, Furious Emissions: The Double-Edged Impact of EV Policies</h3>
+                        <span class="project-org">University of Maryland</span>
+                    </div>
+                    <div class="project-content">
+                        <p>Examined the environmental impact of electric vehicle subsidies in India, focusing on pollution substitution effects through increased electricity demand in a fossil-fuel-dominated grid.</p>
+                        
+                        <div class="interactive-section">
+                            <button class="code-toggle" onclick="toggleCode('ev-model')">
+                                <i class="fas fa-calculator"></i> View Welfare Optimization Model
+                            </button>
+                            <div id="ev-model" class="code-snippet">
+                                <pre>// Social Welfare Optimization
+Objective: minₚ,ₛ V(p) + G(r(s,c)) + O
+Constraints:
+  ∫y(e(p),r(s,c),w)dw ≤ ȳ  (Production)
+  B ≥ s + p              (Budget)
+
+Key Findings:
+• EV subsidies alone increase grid emissions
+• Solar microgrid subsidies mitigate this effect
+• Coordinated policies maximize welfare gains</pre>
+                            </div>
+                        </div>
+
+                        <div class="key-findings">
+                            <h4>Key Empirical Results</h4>
+                            <div class="finding-item">
+                                <span class="finding-metric">+576 EVs</span>
+                                <span class="finding-desc">per 1% increase in electricity generation</span>
+                            </div>
+                            <div class="finding-item">
+                                <span class="finding-metric">-4.7 μg/m³</span>
+                                <span class="finding-desc">SO₂ reduction post-FAME policy</span>
+                            </div>
+                        </div>
+
+                        <div class="project-tools">
+                            <span class="tool-tag">Stata</span>
+                            <span class="tool-tag">Welfare Optimization</span>
+                            <span class="tool-tag">Causal Inference</span>
+                            <span class="tool-tag">Energy Economics</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="ScholarlyPaper_VarunC_2024.pdf" class="btn-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Full Paper
+                        </a>
+                        <a href="#ev-details" class="btn-link" onclick="showEVDetails()">
+                            <i class="fas fa-chart-line"></i> Interactive Results
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Refugee Integration Project -->
                 <div class="project-card">
                     <div class="project-header">
                         <h3>Refugee Labor Market Integration</h3>
@@ -80,7 +140,7 @@ p-value = proportion(|τ_i| ≥ |τ_observed|)</pre>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
+                <!-- COVID Misinformation Project -->
                 <div class="project-card">
                     <div class="project-header">
                         <h3>COVID-19 Misinformation RCT</h3>
@@ -123,42 +183,66 @@ p-value = proportion(|τ_i| ≥ |τ_observed|)</pre>
                         <a href="#" class="btn-link"><i class="fas fa-file-pdf"></i> Conference Paper</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Female Labor Force Participation</h3>
-                        <span class="project-org">World Bank</span>
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="hobbies">
+        <div class="container">
+            <h2>Creative Pursuits</h2>
+            <p class="section-subtitle">Where quantitative thinking meets qualitative making</p>
+            
+            <div class="hobbies-grid">
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-utensils"></i>
                     </div>
-                    <div class="project-content">
-                        <p>Collated and analyzed time-use data from 139 countries to assess constraints on female labor force participation, contributing to cross-country gender gap analysis.</p>
-                        
-                        <div class="interactive-section">
-                            <div class="stats-grid">
-                                <div class="stat-item">
-                                    <div class="stat-number">139</div>
-                                    <div class="stat-label">Countries</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-number">50M+</div>
-                                    <div class="stat-label">Data Points</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-number">△</div>
-                                    <div class="stat-label">Causal Effects</div>
-                                </div>
-                            </div>
-                        </div>
+                    <h3>Ramen Making</h3>
+                    <p>Experimental cooking with precise measurements and traditional techniques. From broth extraction to noodle texture optimization.</p>
+                    <div class="hobby-details">
+                        <span class="hobby-tag">48-hour broths</span>
+                        <span class="hobby-tag">Noodle hydration</span>
+                        <span class="hobby-tag">Umami optimization</span>
+                    </div>
+                </div>
 
-                        <div class="project-tools">
-                            <span class="tool-tag">Python</span>
-                            <span class="tool-tag">Multiple Hypothesis Testing</span>
-                            <span class="tool-tag">Cross-country Analysis</span>
-                        </div>
-                        <p class="project-result"><strong>Contribution:</strong> Applied multiple testing corrections for robust inference</p>
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-tools"></i>
                     </div>
-                    <div class="project-links">
-                        <a href="#" class="btn-link"><i class="fas fa-globe-americas"></i> Cross-country Analysis</a>
+                    <h3>Woodworking</h3>
+                    <p>Creating functional art through joinery and finishing. Combining traditional craftsmanship with modern design principles.</p>
+                    <div class="hobby-details">
+                        <span class="hobby-tag">Japanese joinery</span>
+                        <span class="hobby-tag">Finish chemistry</span>
+                        <span class="hobby-tag">Ergonomic design</span>
+                    </div>
+                </div>
+
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Fixing Cars</h3>
+                    <p>Diagnostic problem-solving and mechanical restoration. From engine diagnostics to electrical systems troubleshooting.</p>
+                    <div class="hobby-details">
+                        <span class="hobby-tag">Engine diagnostics</span>
+                        <span class="hobby-tag">Vintage restoration</span>
+                        <span class="hobby-tag">Electrical systems</span>
+                    </div>
+                </div>
+
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Watercolour</h3>
+                    <p>Exploring color theory and composition through fluid mediums. Balancing precision with spontaneous expression.</p>
+                    <div class="hobby-details">
+                        <span class="hobby-tag">Color theory</span>
+                        <span class="hobby-tag">Composition</span>
+                        <span class="hobby-tag">Fluid dynamics</span>
                     </div>
                 </div>
             </div>
@@ -193,11 +277,6 @@ p-value = proportion(|τ_i| ≥ |τ_observed|)</pre>
                     </div>
                 </div>
 
-                <div class="personal-interests">
-                    <h4>Beyond Research</h4>
-                    <p>Woodworking, Ramen making, Fixing cars, Watercolour painting</p>
-                </div>
-
                 <div class="about-links">
                     <a href="Varun_Chati_Resume.pdf" class="btn" download>
                         <i class="fas fa-download"></i> Download Resume
@@ -219,20 +298,14 @@ p-value = proportion(|τ_i| ≥ |τ_observed|)</pre>
                 <div class="contact-item">
                     <a href="mailto:varunchati@protonmail.com" class="contact-link">
                         <i class="fas fa-envelope"></i>
-                        <span>varunchati@protonmail.com</span>
+                        <span>varuachati@protonmail.com</span>
                     </a>
                 </div>
                 <div class="contact-item">
-                    <a href="https://www.linkedin.com/in/varun-chati-61322063/" class="contact-link">
+                    <a href="https://linkedin.com/in/varun-chati-61322063" class="contact-link">
                         <i class="fab fa-linkedin"></i>
                         <span>LinkedIn</span>
                     </a>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-link">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Washington, DC</span>
-                    </div>
                 </div>
             </div>
         </div>
